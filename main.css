@@ -1,0 +1,17 @@
+body {
+    padding: 25px 0;
+}
+
+.form-control, input {
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+}
+
+th, td {
+    padding: 5px 15px;
+}
+
+.panel {
+    padding: 25px;
+}
