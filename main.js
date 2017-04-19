@@ -3,10 +3,9 @@
  */
 $(document).ready( () => {
     let formData;
-    axios.get('http://127.0.0.1:8000/get_docs/')
+    axios.get('https://salty-ravine-56464.herokuapp.com/get_docs/')
     .then(function (response) {
         formData = response.data;
-        console.log(formData);
         let i = 1;
         formData && formData.time_slots && formData.time_slots.length && formData.time_slots.forEach( (student) => {
             if ( student[`student${i}`]) {
@@ -34,10 +33,9 @@ $(document).ready( () => {
                 });
             }
         });
-        console.log(formData);
         axios({
             method: 'post',
-            url: 'http://127.0.0.1:8000/post_docs/',
+            url: 'https://salty-ravine-56464.herokuapp.com/post_docs/',
             data: JSON.stringify(formData && formData.time_slots)
         });
     });
