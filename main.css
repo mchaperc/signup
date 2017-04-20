@@ -1,5 +1,36 @@
 body {
-    padding: 25px 0;
+    background-color: #66B9BF;
+    font-family: 'Shadows Into Light Two', cursive;
+    padding-bottom: 25px;
+}
+
+h2 {
+    display: inline-block;
+    margin: 0;
+}
+
+nav {
+    background-color: #07889B;
+    height: initial;
+    padding: 25px 35px 0 35px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #EEAA7B;
+}
+
+.btn:hover, .btn:active {
+    background-color: #E37222;
+}
+
+.floating-instructions {
+    background-color: #E37222;
+    color: #fafafa;
+    font-size: 1.5rem;
+    margin-top: 75px;
+    padding: 25px;
+    text-align: center;
 }
 
 .form-control, input {
@@ -8,12 +39,52 @@ body {
     box-shadow: none;
 }
 
-th, td {
+th {
+    padding: 15px;
+}
+
+td {
+    border-bottom: 1px solid rgba(0,0,0,.1);
     padding: 5px 15px;
 }
 
+th, td {
+    border-radius: 0;
+}
+
+td:first-of-type {
+    border-right: 1px solid rgba(0,0,0,.1);
+}
+
+tr {
+    background-color: #EFEFEF;
+}
+
 table {
-    margin: 50px auto 0 auto;
+    box-shadow: 0 1px 5px rgba(0,0,0,.3);
+    font-size: 1.5rem;
+    margin: 40px auto 0 auto;
+    width: initial;
+}
+
+input[type=text], input[type=text]:active, input[type=text]:focus, input[type=text].invalid {
+    border-bottom: none !important;
+    box-shadow: none !important;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.stripe {
+    background-color: #EEAA7B;
+    color: white;
+}
+
+.stripe td {
+    border-bottom: 1px solid #FAFAFA;
+}
+
+.stripe td:first-of-type {
+    border-right: 1px solid #FAFAFA;
 }
 
 .navbar {
@@ -22,4 +93,33 @@ table {
 
 #saveSignup {
     float: right;
+}
+
+@media (max-width: 990px) {
+    nav {
+        padding-bottom: 15px;
+    }
+    .h2 {
+        display: block;
+    }
+    #saveSignup {
+        display: block;
+        float: none;
+        margin: 15px auto 0 auto;
+    }
+    .floating-instructions {
+        display: block;
+        font-size: 1.5rem;
+        margin: 175px auto 0 auto;
+        max-width: 400px;
+    }
+    table {
+        margin: 25px auto 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .floating-instructions {
+        margin: 250px auto 0 auto;
+    }
 }
